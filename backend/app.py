@@ -2,7 +2,7 @@ from flask import Flask
 from flask_CORS import CORS
 app = Flask(__name__)
 
-BASE_URL = '/api/events-app'
+BASE_URL = '/events/api'
 
 @app.route('/')
 def team_python():
