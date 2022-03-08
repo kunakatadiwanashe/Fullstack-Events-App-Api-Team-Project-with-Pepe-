@@ -3,13 +3,13 @@ from flask_restful import Resource
 
 
 
-class BookLIst(resource):
+class EventsList(resource):
     def get(self):
-        return {'hello': 'from booklist'}
+        return {'hello': 'from EventsList'}
 
-class Book(resource):
+class Event(resource):
     def get(self):
-        return {'hello': 'from book'}
+        return {'hello': 'from Event'}
 
 
 class ReviewList(resource):
