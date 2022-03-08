@@ -16,4 +16,8 @@ def reviews_get_by_event_id(self, event_id):
     return [x for x in reviews if x.eventId == event_id]
 
 
+def review_add(self, data):
+    return EventModel(data['content'], data['eventId'], 1)
+
+
 
