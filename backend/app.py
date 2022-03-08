@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from routes import Event
+from Routes import EventsList, Event
 
 BASE_URL = '/api/events'
 
