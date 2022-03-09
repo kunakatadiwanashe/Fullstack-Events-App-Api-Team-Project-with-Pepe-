@@ -5,7 +5,6 @@ from models import EventModel, ReviewModel
 
 repo = Repository()
 
-
 class EventsList(resource):
     def get(self):
         return {'hello': 'from EventsList'}

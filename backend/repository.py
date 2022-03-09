@@ -18,7 +18,7 @@ class Repository():
         events = [event1, event2]
         return next((x for x in events if x.eventId == event_id), None)
 
-    def reviews_get_by_review_id(self, event_id):
+    def reviews_get_by_event_id(self, event_id):
         reviews = [review1,review2,review3,review4]
         return [x for x in reviews if x.eventId == event_id]
 
