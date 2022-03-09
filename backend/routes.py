@@ -14,7 +14,7 @@ class ReviewList(Resource):
         return {'hello': 'from reviews'}
 
 
-class Review(resource):
+class Review(Resource):
     def get(self):
         return {'hello': 'from review'}
 
