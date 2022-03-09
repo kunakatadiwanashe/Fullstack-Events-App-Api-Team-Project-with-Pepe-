@@ -1,6 +1,7 @@
 from flask import Flask
-from flask_restful import Api 
-from routes import EventsList, Event, ReviewList, Review
+from flask_restful import Api
+from flask_CORS import CORS
+from routes import ReviewList, Event, EventsList, Review
 
 app = Flask(__name__)
 api = Api(app)
