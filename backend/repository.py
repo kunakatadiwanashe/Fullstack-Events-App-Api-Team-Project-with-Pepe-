@@ -16,6 +16,9 @@ class Repository():
     def get_event_by_id(event_id):
         events = [event1, event2]
         return [x.__dict__ for x in events if x.id == event_id]
+    
+    def reviews_get_all():
+        return [review1, review2]
 
     def review_add(self, data):
         return ReviewModel(data['content'], data['eventId'], 1)
