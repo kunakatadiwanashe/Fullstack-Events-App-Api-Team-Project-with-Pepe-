@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 from backend.models import ReviewModel
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 from repository import Repository
 from Routes import EventList, Event
 from unittest.mock import MagicMock
@@ -16,9 +21,13 @@ class Repository():
     def events_get_all(self):
         return[event1,event2]
 
+<<<<<<< HEAD
     def get_event_by_id(self, event_id):
         events = [event1, event2]
         return [x for x in events if x.eventId == event_id]
+=======
+>>>>>>> origin/add-repository-file
+>>>>>>> main
 
     def review_add(self, data):
         return ReviewModel(data['content'], data['eventId'], 1)
