@@ -1,14 +1,12 @@
 from flask import Flask
-from flask_restful import Api
-from routes import EventsList, Event
-
-BASE_URL = '/api/events'
-
 
 app = Flask(__name__)
 
-api = Api(app)
-api.add_resource(Event, f'{BASE_URL}/Events/')
+BASE_URL = '/events/api'
+
+@app.route('/')
+def team_python():
+    return 'Python API'
 
 if __name__ == '__main__':
     app.run(debug=True)
