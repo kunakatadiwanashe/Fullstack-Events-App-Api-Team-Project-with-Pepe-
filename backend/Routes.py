@@ -11,7 +11,6 @@ class Event(resource):
     def get(self):
         return {'hello': 'from Event'}
 
-
 class ReviewList(resource):
     def get(self):
         return {'hello': 'from reviews'}
@@ -19,6 +18,6 @@ class ReviewList(resource):
 
 class Review(resource):
     def get(self):
-        return {'hello': 'from review'}
+        return {'hello': 'from review'},
 
 
