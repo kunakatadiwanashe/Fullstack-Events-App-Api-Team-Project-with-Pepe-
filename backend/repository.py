@@ -1,4 +1,3 @@
-from backend.models import ReviewModel
 from repository import Repository
 from routes import EventList, Event
 from unittest.mock import MagicMock
@@ -12,12 +11,9 @@ review1 = ReviewModel("reviewed by Tino","09-03-2022", 1)
 review2 = ReviewModel("reviewer by Tine","02-03-2022", 2)
 
 
-
-
 class Repository():
     def events_get_all(self):
         return[event1,event2]
-
 
     def get_event_by_id(self, event_id):
         events = [event1, event2]
