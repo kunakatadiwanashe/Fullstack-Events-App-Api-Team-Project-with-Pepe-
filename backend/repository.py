@@ -1,4 +1,3 @@
-from routes import EventList, Event
 from models import EventModel,ReviewModel
 
 event1 = EventModel("church service","Happening at goromonzi","@4pm", 1)
