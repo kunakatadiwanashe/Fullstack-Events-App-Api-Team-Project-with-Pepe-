@@ -10,6 +10,8 @@ class EventsList(resource):
 class Event(resource):
     def get(self):
         return {'hello': 'from Event'}
+    
+
 
 
 class ReviewList(resource):
@@ -17,8 +19,9 @@ class ReviewList(resource):
         return {'hello': 'from reviews'}
 
 
-class Review(resource):
-    def get(self):
-        return {'hello': 'from review'}
+
+class Review(Resource):
+    def get(self, event_id):
+        return {'hello': f'from event {event_id}'}
 
 
