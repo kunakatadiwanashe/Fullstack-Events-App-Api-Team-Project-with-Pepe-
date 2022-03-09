@@ -13,6 +13,7 @@ class EventsList(Resource):
 class Event(Resource):
     def __init__(self, repo=repository):
         self.repo = repo
+        
     def get(self, event_id):
         return self.repo.get_event_by_id(int(event_id))
 

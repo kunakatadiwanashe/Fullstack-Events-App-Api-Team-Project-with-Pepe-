@@ -1,6 +1,4 @@
-from unittest.mock import MagicMock
 from models import EventModel, ReviewModel
-
 
 event1 = EventModel("church service","Happening at goromonzi","@4pm", 1)
 event2 = EventModel("party","happening in Harare","@2pm" ,2)
