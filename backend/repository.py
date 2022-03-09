@@ -1,7 +1,5 @@
-from backend.models import ReviewModel
-from Routes import EventList, Event
+from routes import EventList, Event
 from models import EventModel,ReviewModel
-
 
 event1 = EventModel("church service","Happening at goromonzi","@4pm", 1)
 event2 = EventModel("party","happening in Harare","@2pm" ,2)
@@ -19,6 +17,10 @@ class Repository():
     def get_event_by_id(self, event_id):
         events = [event1, event2]
         return next((x for x in events if x.eventId == event_id), None)
+
+    def reviews_get_by_event_id(self, event_id):
+        reviews = [review1,review2,review3,review4]
+        return [x for x in reviews if x.eventId == event_id]
 
     def review_add(self, data):
         return ReviewModel(data['content'], data['eventId'], 1)
