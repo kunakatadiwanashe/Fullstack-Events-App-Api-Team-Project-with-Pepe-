@@ -1,16 +1,16 @@
 from flask import Flask
-from flask_restful import Api
-from routes import ReviewList, Event, EventsList, Review
+from flask_restful import Api 
+from routes import EventsList, Event, ReviewList, Review
 
 app = Flask(__name__)
 api = Api(app)
 
 BASE_URL = '/events/api'
 
-api.add_resource(EventList, f'{BASE_URL}/EventList')
-api.add_resource(Event, f'{BASE_URL}/Event/<event_id>')
-api.add_resource(ReviewList, f'{BASE_URL}/ReviewList')
-api.add_resource(Review, f'{BASE_URL}/Review/<review_id>')
+api.add_resource(EventsList, f'{BASE_URL}/Events')
+api.add_resource(Event, f'{BASE_URL}/Event')
+api.add_resource(ReviewList, f'{BASE_URL}/Reviews')
+api.add_resource(Review, f'{BASE_URL}/Review')
 
 @app.route('/')
 def team_python():

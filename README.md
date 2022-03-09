@@ -1,5 +1,4 @@
 # Fullstack-Events-App-Api-Team-Project-with-Pepe-
-# Fullstack-Events-App-Api-Team-Project-with-Pepe-
 Front end was done in react and backend with python
 
 npm install to install node_modules
@@ -12,4 +11,3 @@ MS Windows: python -m venv env
 Mac: python3 -m venv env
 
 and activate env using 
-
