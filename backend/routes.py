@@ -1,5 +1,9 @@
 import resource
 from flask_restful import Resource
+from flask import request
+from repository import Repository
+
+repo = Repository()
 
 
 
@@ -17,8 +21,9 @@ class ReviewList(resource):
         return {'hello': 'from reviews'}
 
 
-class Review(resource):
-    def get(self, review_id)):
-        return {'hello': 'from review {review_id}'}
+class Review(Resource):
+    def post(self):
+        data = request.get_json()
+        return repo.review_add(data).__dict__
 
 
