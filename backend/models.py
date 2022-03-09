@@ -9,7 +9,7 @@ class EventModel():
 
 
 
-class EventReview():
+class ReviewModel():
     def __init__(self,comment, created_at, eventId, id=-1):
         self.comment = comment
         self.created_at = created_at
