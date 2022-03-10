@@ -24,7 +24,7 @@ class Repository():
         return [x for x in events if x.eventId == event_id]
 
     def reviews_get_by_review_id(self, event_id):
-        reviews = [review1, review2, review3, review4]
+        reviews = [review1, review2]
         return [x for x in reviews if x.eventId == event_id]
 
     def review_get_by_id(self, event_id):
