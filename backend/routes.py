@@ -8,6 +8,10 @@ class EventsList(Resource):
     def get(self):
         return {'hello': 'from EventsList'}
 
+    def post(self):
+        data = request.get_json
+        return self.repo.book_add(data).__dict__
+
 class Event(Resource):
     def get(self, event_id):
         return {'hello': 'from Event {event_id}'}
