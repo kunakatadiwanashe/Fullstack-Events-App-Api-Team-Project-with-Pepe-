@@ -10,7 +10,7 @@ class EventsList(resource):
         return {'hello': 'from EventsList'}
 
 class Event(resource):
-    def get(self, event_id):):
+    def get(self, event_id):
         return {'hello': f'from Event {event_id}'}
 
 class ReviewList(resource):
@@ -21,7 +21,7 @@ class Review(resource):
     def __init__(self, repo=Repository):
         self.repo = repo
 
-    def get(self, review_id)):
+    def get(self, review_id):
         return {'hello': f'from review {review_id}'}
     
     def post(self):
