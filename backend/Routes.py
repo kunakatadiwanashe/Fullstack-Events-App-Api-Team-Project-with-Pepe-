@@ -13,6 +13,10 @@ class Event(Resource):
     def get(self, event_id):
         return {'hello': f'from Event {event_id}'}
 
+    def post(self):
+        data = request.get_json()
+        return self.repo.event_add(data).__dict__
+
 class ReviewList(Resource):
     def get(self, event_id):
         return [review.__dict__ for review in repo.reviews_get_by_book_id(int(event_id))]
@@ -27,6 +31,8 @@ class Review(Resource):
     def post(self):
        data = request.get_json()
        return self.repo.review_add(data).__dict__
+
+
 
 # from flask_restful import resource  
 # from flask import request
