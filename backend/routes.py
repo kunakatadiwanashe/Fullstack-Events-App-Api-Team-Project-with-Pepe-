@@ -7,15 +7,15 @@ repo = Repository()
 
 class EventsList(resource):
     def get(self):
-        return {'hello': 'from EventsList'}
+        return [event.__dict__ for event in repo.events_get_all()]
 
 class Event(resource):
     def get(self, event_id):
         return {'hello': f'from Event {event_id}'}
 
-class ReviewList(resource):
+class ReviewList(Resource):
     def get(self, event_id):
-        return {'hello': f' from reviews for event {event_id}'}
+        return [review.__dict__ for review in repo.reviews_get_by_book_id(int(event_id))]
 
 class Review(resource):
     def __init__(self, repo=Repository):

@@ -26,5 +26,10 @@ class Repository():
         reviews = [review1,review2,review3,review4]
         return [x for x in reviews if x.eventId == event_id]
 
+    def review_get_by_id(self, event_id):
+        reviews = [review1, review2]
+        return next((x for x in reviews if x.eventId == event_id), None)
+
+
     def review_add(self, data):
         return ReviewModel(data['content'], data['eventId'], 1)
