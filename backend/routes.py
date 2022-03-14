@@ -1,5 +1,6 @@
 import resource
 from flask_restful import Resource
+from flask import request
 
 
 
@@ -10,6 +11,10 @@ class EventsList(resource):
 class Event(resource):
     def get(self):
         return {'hello': 'from Event'}
+   
+    def post(self):
+        data = request.get_json()
+        return self.repo.event_add(data).__dict__
     
 
 
