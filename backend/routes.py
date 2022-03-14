@@ -1,9 +1,5 @@
 import resource
 from flask_restful import Resource
-from flask import request
-from repository import Repository
-
-repo = Repository()
 
 
 
@@ -12,8 +8,10 @@ class EventsList(resource):
         return {'hello': 'from EventsList'}
 
 class Event(resource):
-    def get(self, event_id):):
-        return {'hello': 'from Event {event_id}'}
+    def get(self):
+        return {'hello': 'from Event'}
+    
+
 
 
 class ReviewList(resource):
@@ -21,9 +19,9 @@ class ReviewList(resource):
         return {'hello': 'from reviews'}
 
 
+
 class Review(Resource):
-    def post(self):
-        data = request.get_json()
-        return repo.review_add(data).__dict__
+    def get(self, event_id):
+        return {'hello': f'from event {event_id}'}
 
 
