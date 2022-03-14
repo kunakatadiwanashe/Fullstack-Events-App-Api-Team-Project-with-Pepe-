@@ -7,14 +7,10 @@ api = Api(app)
 
 BASE_URL = '/events/api'
 
-api.add_resource(EventList, f'{BASE_URL}/EventList')
+api.add_resource(EventsList, f'{BASE_URL}/Events')
 api.add_resource(Event, f'{BASE_URL}/Event/<event_id>')
-api.add_resource(ReviewList, f'{BASE_URL}/ReviewList')
-api.add_resource(Review, f'{BASE_URL}/Review/<review_id>')
-
-@app.route('/')
-def team_python():
-    return 'Python API'
+api.add_resource(ReviewList, f'{BASE_URL}/Reviews')
+api.add_resource(Review, f'{BASE_URL}/Review')
 
 if __name__ == '__main__':
     app.run(debug=True)
