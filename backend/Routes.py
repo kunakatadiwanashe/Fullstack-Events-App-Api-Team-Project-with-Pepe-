@@ -3,30 +3,37 @@ from flask import request
 from repository import Repository
 from models import EventModel, ReviewModel
 
-repo = Repository()
+repository = Repository()
 
 class EventsList(Resource):
+    def __init__(self, repo=repository):
+        self.repo = repo
+        
     def get(self):
-        return [event.__dict__ for event in repo.events_get_all()]
-
+        return [event.__dict__ for event in self.repo.events_get_all()]
+    
 class Event(Resource):
-    def get(self, event_id):
-        return {'hello': f'from Event {event_id}'}
-
+    def __init__(self, repo=repository):
+        self.repo = repo
+        
     def post(self):
         data = request.get_json()
         return self.repo.event_add(data).__dict__
 
 class ReviewList(Resource):
-    def get(self, event_id):
-        return [review.__dict__ for review in repo.reviews_get_by_book_id(int(event_id))]
-
+    def __init__(self, repo=repository):
+        self.repo = repo
+        
+    def get(self):
+        return [review.__dict__ for review in self.repo.reviews_get_all()]
+    
 class Review(Resource):
-    def __init__(self, repo=Repository):
+    def __init__(self, repo=repository):
         self.repo = repo
 
-    def get(self, review_id):
-        return {'hello': f'from review {review_id}'}
+    def get(self):
+        return [review.__dict__ for review in self.repo.reviews_get_all()]
+
     
     def post(self):
        data = request.get_json()
