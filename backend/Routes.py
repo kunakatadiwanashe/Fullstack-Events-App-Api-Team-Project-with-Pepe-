@@ -1,7 +1,6 @@
 from flask_restful import Resource
 from flask import request
 from repository import Repository
-from models import EventModel, ReviewModel
 
 repository = Repository()
 
