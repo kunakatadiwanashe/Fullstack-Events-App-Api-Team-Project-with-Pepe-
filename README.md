@@ -1,4 +1,4 @@
-# Fullstack-Events-App-Api-Team-Project-with-Pepe- (https://github.com/isakal/create-flask-app/pull/new/master)
+# Fullstack-Events-App-Api-Team-Project-with-Pepe- 
 Front end was done in react and backend with python
 
 for the backend server, install the packages using pip install -r requirements.txt
@@ -63,10 +63,10 @@ cd my-app
 ```
 Inside the newly created project, you can run some commands:
 
-### `source venv/bin/activate` or `.\venv\Scripts\activate`
+### `source env/bin/activate` or `.\env\Scripts\activate`
 Activates the virutal environment required for the project dependency isolation.
 
-[Read more about venv.](https://https://docs.python.org/3/library/venv.html)  
+[Read more about env.](https://https://docs.python.org/3/library/env.html)  
 
 ### `pip install -r requirements.txt`
 Installs libraries and dependencies listed in `requirements.txt` in active environment.
