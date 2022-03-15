@@ -1,11 +1,11 @@
-# Fullstack-Events-App-Api-Team-Project-with-Pepe- [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/isakal/create-flask-app/pull/new/master)
+# Fullstack-Events-App-Api-Team-Project-with-Pepe- (https://github.com/isakal/create-flask-app/pull/new/master)
 Front end was done in react and backend with python
 
 for the backend server, install the packages using pip install -r requirements.txt
 to start the server in (env) mode
 
-MS Windows: python -m venv env
-Mac: python3 -m venv env
+MS Windows: python -m env env
+Mac: python3 -m env env
 
 and activate env using 
 
@@ -14,8 +14,6 @@ Flask port of [create-react-app](https://facebook.github.io/create-react-app/) t
 - [Creating an app](#creating-an-app) - How to create a new app.
 
 Create Flask app works on macOS, Windows and Linux.
-If something doesn't work, please [file an issue](https://github.com/isakal/create-flask-app/issues/new).
-If you have questions, suggestions or need help, [feel free to open an issue](https://github.com/isakal/create-flask-app/issues/new).
 
 ## Quick overview 
 
@@ -23,12 +21,11 @@ If you have questions, suggestions or need help, [feel free to open an issue](ht
 pip install createflaskapp
 create-flask-app my-app
 cd my-app
-# activate venv
+# activate env
 python run.py
 ```
 *(use correct version of [pip](https://pip.pypa.io/en/stable/) and [python](https://python.org/) according to your OS and python install)*
 Then open [http://localhost:5000](http://localhost:5000) to see your app.
-When you are ready to deploy to production, set environment variable `PRODUCTION` to  `True` on your server of choice, clone the project onto your server and spin it up.
 
 
 ## Creating an app
