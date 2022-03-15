@@ -1,11 +1,11 @@
-# Fullstack-Events-App-Api-Team-Project-with-Pepe- [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/isakal/create-flask-app/pull/new/master)
+# Fullstack-Events-App-Api-Team-Project-with-Pepe- (https://github.com/isakal/create-flask-app/pull/new/master)
 Front end was done in react and backend with python
 
 for the backend server, install the packages using pip install -r requirements.txt
 to start the server in (env) mode
 
-MS Windows: python -m venv env
-Mac: python3 -m venv env
+MS Windows: python -m env env
+Mac: python3 -m env env
 
 and activate env using 
 
@@ -23,7 +23,7 @@ If you have questions, suggestions or need help, [feel free to open an issue](ht
 pip install createflaskapp
 create-flask-app my-app
 cd my-app
-# activate venv
+# activate env
 python run.py
 ```
 *(use correct version of [pip](https://pip.pypa.io/en/stable/) and [python](https://python.org/) according to your OS and python install)*
