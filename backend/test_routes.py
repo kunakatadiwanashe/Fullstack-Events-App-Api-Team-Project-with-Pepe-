@@ -1,5 +1,5 @@
 from models import EventModel, ReviewModel
-from Routes import EventsList, Event, ReviewList, Review
+from routes import EventsList, Event, ReviewList, Review
 from repository import Repository
 from unittest.mock import MagicMock
 
