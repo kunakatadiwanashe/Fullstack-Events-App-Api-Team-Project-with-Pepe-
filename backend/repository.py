@@ -1,4 +1,4 @@
-from backend.models import ReviewModel
+from models import ReviewModel
 from repository import Repository
 from routes import EventList, Event
 from unittest.mock import MagicMock
