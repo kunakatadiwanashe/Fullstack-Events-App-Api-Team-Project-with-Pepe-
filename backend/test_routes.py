@@ -25,3 +25,9 @@ def test_review_get():
     assert int(review['eventId']) = 2
     assert review['comment'] == 'reviewer by Tine'
     
+def test_EventsList_get():
+    repo = MagicMock(spec=Repository)
+    repo.events_get_all.return_value = [event1, event2]
+    events = EventsList(repo).get()
+    assert events[0]['id'] == 1
+    assert events[1]['title'] == 'Test church service'
